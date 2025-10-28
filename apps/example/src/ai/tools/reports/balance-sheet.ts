@@ -25,8 +25,8 @@ export const balanceSheetTool = tool({
     useArtifact: z
       .boolean()
       .optional()
-      .default(false)
-      .describe("When the user asks for visual report, use this flag to enable the visualization"),
+      .default(true)
+      .describe("Show visual balance sheet with charts and metrics (default: true). Set to false only for quick text responses."),
   }),
 
   execute: async function* (

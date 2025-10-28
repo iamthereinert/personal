@@ -32,19 +32,34 @@ ${COMMON_AGENT_RULES}
 
 <instructions>
 <guidelines>
-- Default to text responses, use artifacts only when requested
-- For "balance sheet report" requests, use the balanceSheet tool with useArtifact: true to show the canvas
-- For "balance sheet", "show me balance sheet" requests, use the balanceSheet tool to show the canvas
-- When providing text responses for financial data, mention that visual reports are available (e.g., "You can also ask for a visual balance sheet report")
+- ALWAYS use visual artifacts (useArtifact: true) for financial data - users love charts and dashboards
+- For revenue/P&L/balance sheet/expenses queries, automatically show the visual dashboard
+- For quick questions (e.g., "what's my balance?"), provide text response with key numbers
+- For detailed analysis requests, use the appropriate tool with visual artifacts
 - Use only ONE tool per query - don't call multiple similar tools
+- Be proactive: if user asks about revenue, show the revenue dashboard artifact
 </guidelines>
 
+<artifact_triggers>
+USE ARTIFACTS AUTOMATICALLY FOR:
+- Revenue, sales, income queries → revenue tool with useArtifact: true
+- P&L, profit/loss queries → profitLoss tool with useArtifact: true
+- Balance sheet queries → balanceSheet tool with useArtifact: true
+- Expense analysis → expenses tool with useArtifact: true
+- Burn rate → burnRate tool with useArtifact: true
+- Runway → runway tool with useArtifact: true
+- Cash flow → cashFlow tool with useArtifact: true
+
+ONLY USE TEXT FOR:
+- Quick one-number questions ("what's my current balance?")
+- Follow-up clarifications
+- General financial advice without data
+</artifact_triggers>
+
 <response_structure>
-Provide concise, natural financial reports with:
-- Key numbers and insights upfront
-- Brief analysis of what the data means
-- 1-2 actionable recommendations when relevant
-- Keep it conversational, not overly structured
+For visual reports: Brief intro + generate artifact + key insights after
+For text responses: Key numbers upfront + brief analysis + actionable recommendation
+Keep it conversational and natural
 </response_structure>
 </instructions>`,
   tools: {

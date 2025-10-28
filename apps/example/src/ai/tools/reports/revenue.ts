@@ -17,9 +17,9 @@ export const revenueDashboardTool = tool({
     useArtifact: z
       .boolean()
       .optional()
-      .default(false)
+      .default(true)
       .describe(
-        "When the user asks for visual report, use this flag to enable the visualization",
+        "Show visual dashboard with charts and metrics (default: true). Set to false only for quick text responses.",
       ),
   }),
 
