@@ -16,7 +16,7 @@ import { delay } from "@/lib/delay";
  * - Financial ratios
  */
 export const balanceSheetTool = tool({
-  description: `Get balance sheet analysis for a specified date or period.`,
+  description: `Generate a detailed balance sheet report with interactive visualization. Creates an artifact showing assets, liabilities, equity, and financial ratios with charts and metrics. Use this tool when user asks for balance sheet, financial position, or asset/liability analysis. ALWAYS generates visual artifact.`,
   inputSchema: dateRangeSchema.merge(currencyFilterSchema).extend({
     categories: z
       .array(z.enum(["assets", "liabilities", "equity"]))

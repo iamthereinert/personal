@@ -12,7 +12,7 @@ import { delay } from "@/lib/delay";
  * Generates a comprehensive revenue dashboard with charts and metrics.
  */
 export const revenueDashboardTool = tool({
-  description: `Generate a comprehensive revenue dashboard with charts and metrics.`,
+  description: `Generate an interactive revenue dashboard artifact with charts, metrics, and trend analysis. Use this tool when user asks for revenue data, sales analysis, or income reports. ALWAYS creates visual artifact with multiple charts and comprehensive metrics.`,
   inputSchema: dateRangeSchema.merge(currencyFilterSchema).extend({
     useArtifact: z
       .boolean()
