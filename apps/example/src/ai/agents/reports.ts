@@ -16,6 +16,9 @@ export const reportsAgent = createAgent({
   name: "reports",
   model: openai("gpt-4o-mini"),
   temperature: 0.3,
+  modelSettings: {
+    toolChoice: "required",
+  },
   instructions: (
     ctx,
   ) => `You are a financial reports specialist for ${ctx.companyName}. Provide clear financial metrics and insights.
