@@ -23,7 +23,7 @@
     "dev": "tsup --watch"
   },
   "dependencies": {
-    "@ai-sdk-tools/debug": "workspace:*",
+    "@ai-sdk-tools/debug": "file:../debug",
     "zod": "^4.1.12"
   },
   "peerDependencies": {

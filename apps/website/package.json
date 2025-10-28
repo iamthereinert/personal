@@ -11,9 +11,9 @@
     "format": "biome format --write"
   },
   "dependencies": {
-    "@ai-sdk-tools/artifacts": "workspace:*",
-    "@ai-sdk-tools/devtools": "workspace:*",
-    "@ai-sdk-tools/store": "workspace:*",
+    "@ai-sdk-tools/artifacts": "file:../../packages/artifacts",
+    "@ai-sdk-tools/devtools": "file:../../packages/devtools",
+    "@ai-sdk-tools/store": "file:../../packages/store",
     "@ai-sdk/openai": "^2.0.53",
     "@openpanel/nextjs": "^1.0.8",
     "ai": "^5.0.76",

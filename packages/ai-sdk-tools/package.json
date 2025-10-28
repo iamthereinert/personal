@@ -63,12 +63,12 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@ai-sdk-tools/agents": "workspace:*",
-    "@ai-sdk-tools/artifacts": "workspace:*",
-    "@ai-sdk-tools/cache": "workspace:*",
-    "@ai-sdk-tools/devtools": "workspace:*",
-    "@ai-sdk-tools/memory": "workspace:*",
-    "@ai-sdk-tools/store": "workspace:*"
+    "@ai-sdk-tools/agents": "file:../agents",
+    "@ai-sdk-tools/artifacts": "file:../artifacts",
+    "@ai-sdk-tools/cache": "file:../cache",
+    "@ai-sdk-tools/devtools": "file:../devtools",
+    "@ai-sdk-tools/memory": "file:../memory",
+    "@ai-sdk-tools/store": "file:../store"
   },
   "peerDependencies": {
     "ai": ">=5.0.0",
